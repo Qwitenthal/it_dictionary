@@ -1,10 +1,9 @@
 import pandas as pd
 
 # Завантаження CSV-файлу
-file_path = "____________________________________.csv"
+file_path = "slovnyk.csv"
 df = pd.read_csv(file_path)
 
-# Заміна "менеджмент" на "загальне"
 df["Сфера вживання"] = df["Сфера вживання"].replace("менеджмент", "загальне")
 
 # Сортування з ігноруванням неалфавітних символів
@@ -176,5 +175,5 @@ window.onload = filterTable;
 """
 
 # Збереження HTML
-with open("it_dictionary.html", "w", encoding="utf-8") as f:
+with open(r"C:\Users\Olga\PycharmProjects\dictionary\index.html", "w", encoding="utf-8") as f:
     f.write(html_content)
